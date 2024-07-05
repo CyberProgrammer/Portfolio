@@ -1,9 +1,45 @@
 *{
     margin:0;
     padding:0;
+    -webkit-font-smoothing: antialiased;
 }
 
+html{
+    scroll-padding-top: 70px;
+}
 html, body{
+    font-family: epilogue-regular, sans-serif;
+    -webkit-text-size-adjust: 100%;
     width: 100%;
     height: 100%;
+    background-color: #2B2D30;
+}
+
+p{
+    font-family: epilogue-regular, sans-serif;
+    font-size: 0.8em;
+    color: #111111;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+}
+
+a{
+    color: #111111;
+}
+
+h1{
+    font-family: epilogue-medium, sans-serif;
+}
+
+@font-face {
+    font-family: 'epilogue-medium';
+    src: url("./assets/fonts/Epilogue/static/Epilogue-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'epilogue-regular';
+    src: url("./assets/fonts/Epilogue/static/Epilogue-Regular.ttf");
 }

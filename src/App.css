@@ -1,4 +1,8 @@
 #app{
+    margin: auto;
     height: 100vh;
-    background-color: #2b2d30;
+    max-width: 1920px;
+    background-color: #F6F7F9;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }

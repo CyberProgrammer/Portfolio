@@ -1,13 +1,18 @@
-import Navigation from "../../components/navigation/navigation.tsx";
 
 const Showcase = () => {
-    return (
-        <div id={"app"}>
-            <Navigation/>
-            <div className={"content"}>
-                <h1>Showcase</h1>
+
+    return(
+        <>
+            <div className={"section-header"}>
+                <h1>Latest Creations</h1>
             </div>
-        </div>
+            <div className={"card-container"}>
+                <div className={"card"}>
+                    <h2>Title</h2>
+                    <p>SHort description</p>
+                </div>
+            </div>
+        </>
     )
 }
 

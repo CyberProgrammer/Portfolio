@@ -1,41 +1,75 @@
-.mobile-menu{
+/* Container holding the entire mobile navigation section */
+.nav-mobile-container{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: end;
+    background-color: #1a1a1d;
     width: 60%;
 }
 
-.mobile-links-container{
+/* Div containing the menu icon*/
+.nav-mobile-menu{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    max-height: 80px;
+}
+
+/* Icon image */
+#nav-menu-icon{
+    width: 50px;
+    height: 50px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+/* Container holding the mobile links */
+.nav-mobile-links{
+    position: absolute;
+    top: 80px;
+    width: 60%;
+    height: calc(100vh - 80px);
+    display: none; /* Initially hidden, will be shown when the menu is toggled */
+    flex-direction: column;
+    align-items: center;
+    background-color: darkgrey;
+}
+
+.show-nav{
+    display: flex !important;
+    flex-direction: column;
+}
+
+/* ul element */
+.nav-mobile-links-list{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-mobile-links-list li{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    background-color: gray;
+    min-height: 40px
 }
 
-.mobile-links{
-    width: 90%;
-}
-
-#menu-icon{
-    height: 50px;
-    width: 50px;
-    margin-right: 10%;
-}
-
-.mobile-menu-content{
+/* active link state */
+.nav-link-active{
 
 }
 
-.menu-links-mobile{
-    list-style-type: none;
-}
-
-.menu-links-mobile li{
-    margin: 5% 0 5% 10%;
-}
-
-.link-text{
+.nav-link-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
     text-decoration: none;
     color: white;
     background-color: #242529;

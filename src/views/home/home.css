@@ -1,0 +1,36 @@
+.content{
+    position: static;
+}
+
+#intro-section{
+    padding-top: 100px;
+    background-size: cover;
+    background-image: url("../../assets/images/clouds.jpg");
+}
+
+#about-section{
+    padding-top: 100px;
+}
+
+#showcase-section{
+    padding-top: 100px;
+}
+
+.content-intro{
+    min-height: calc(60vh - 70px);
+}
+
+.content-about{
+    min-height: calc(60vh - 70px);
+}
+
+.content-showcase{
+    min-height: calc(100vh - 70px);
+}
+
+.section-header{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+

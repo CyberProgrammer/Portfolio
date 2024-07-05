@@ -1,22 +1,10 @@
-import {Link, useLocation} from "react-router-dom";
-import MobileMenu from "@assets/icons/menu.svg"
 
 import './mobile.css';
-import React from "react";
-
-interface Params{
-    menuOpen: boolean,
-    setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
-const MobileLinks = ({menuOpen, setMenuOpen}:Params) => {
-
-    const location = useLocation();
-
-    // Checks if link is selected
-    const isActive = (path: string): boolean => {
-        return location.pathname === path;
-    };
-
+import {useState} from "react";
+import MobileMenuIcon from "@assets/icons/menu.svg";
+const MobileLinks = () => {
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
+    const isActive = false;
     const links =
         [
             {text:"Home", path:"/"},
@@ -36,21 +24,23 @@ const MobileLinks = ({menuOpen, setMenuOpen}:Params) => {
     };
 
     return (
-        <div className="mobile-links-container">
-            <div className={"mobile-links"}>
-                {menuOpen && (
-                    <ul className="menu-links-mobile">
-                        {links.map((link, index) => (
-                            <li key={index} className={isActive(link.path) ? 'active' : ''}>
-                                <Link className={"link-text"} to={link.path} onClick={closeMenu}>
-                                    {link.text}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                )}
+        <div className="nav-mobile-container">
+            <div className="nav-mobile-menu">
+                <img id="nav-menu-icon" src={MobileMenuIcon} alt="Menu Icon" onClick={toggleMenu}/>
+            </div>
+            <div className={`nav-mobile-links ${menuOpen ? 'show-nav' : ''}`}>
+                <ul className="nav-mobile-links-list">
+                    {links.map((link, index) => (
+                        <li key={index} className={isActive ? 'nav-link-active' : ''}>
+                            <p className="nav-link-text" onClick={closeMenu}>
+                                {link.text}
+                            </p>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
+
     )
 }
 

@@ -2,29 +2,25 @@ import './styles/navigation.css'
 
 import DesktopLinks from "./links/desktop.tsx";
 import {useMediaQuery} from "react-responsive";
-import MobileMenu from "./mobile_menu.tsx";
-import React from "react";
+import MobileLinks from "./links/mobile.tsx";
+import Logo from '@assets/logos/Logo.svg'
 
-interface Params{
-    menuOpen: boolean,
-    setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
 
-const Navigation = ({menuOpen, setMenuOpen}:Params) => {
-    const isMobile = useMediaQuery({ maxWidth: "500px" });
+const Navigation = () => {
+    const isMobile = useMediaQuery({ maxWidth: "700px" });
 
     return(
         <>
             <div className={"navigation"}>
                 <div className={"nav-left"}>
-                    <h2>Logo</h2>
+                    <img id={"logo"} src={Logo} alt={'Logo'} />
                 </div>
                 {!isMobile && (
                     <DesktopLinks />
                 )}
 
                 {isMobile && (
-                    <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+                    <MobileLinks />
                 )}
             </div>
         </>
