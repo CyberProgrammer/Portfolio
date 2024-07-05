@@ -2,9 +2,16 @@
     position: static;
 }
 
+@media screen and (min-width: 1920px) {
+    #intro-section{
+        /*background-image: none !important;*/
+    }
+}
 #intro-section{
     padding-top: 100px;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
     background-image: url("../../assets/images/clouds.jpg");
 }
 
@@ -14,6 +21,7 @@
 
 #showcase-section{
     padding-top: 100px;
+    margin-bottom: 20%;
 }
 
 .content-intro{

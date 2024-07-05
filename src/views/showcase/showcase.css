@@ -1,7 +1,14 @@
-.card-container{
-    background-color: lightgray;
+@media screen and (max-width: 670px) {
+    .card-container{
+        width: 90% !important;
+    }
 }
 
-.card{
-    background-color: #111111;
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
 }
+

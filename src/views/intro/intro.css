@@ -1,3 +1,33 @@
+@media screen and (max-width: 670px) {
+    .intro-section{
+        width: 100% !important;
+    }
+
+    .section-header{
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .about-text{
+        text-align: center !important;
+    }
+    .section-content{
+        width: 90% !important;
+        margin-left: 5% !important;
+    }
+}
+
+.intro-section{
+    margin: auto;
+    width: 80%;
+}
+
+.intro{
+    padding: 2% 0;
+    border-top: 2px solid #111111;
+    border-bottom: 2px solid #111111;
+}
+
 .section-header h1{
     font-size: 1.75em;
 }
