@@ -1,0 +1,44 @@
+.mobile-menu{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 60%;
+}
+
+.mobile-links-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: gray;
+}
+
+.mobile-links{
+    width: 90%;
+}
+
+#menu-icon{
+    height: 50px;
+    width: 50px;
+    margin-right: 10%;
+}
+
+.mobile-menu-content{
+
+}
+
+.menu-links-mobile{
+    list-style-type: none;
+}
+
+.menu-links-mobile li{
+    margin: 5% 0 5% 10%;
+}
+
+.link-text{
+    text-decoration: none;
+    color: white;
+    background-color: #242529;
+    padding: 2%;
+    border-radius: 5px;
+}

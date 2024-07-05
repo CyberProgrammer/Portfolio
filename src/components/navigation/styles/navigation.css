@@ -1,0 +1,55 @@
+.navigation{
+    background-color: rgba(30, 31, 34, 0.5);
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+    color: white;
+}
+
+.nav-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+/* Nav links */
+.links{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 75px;
+    max-width: 75px;
+    height: 30px;
+    border: none;
+    margin: 0 5px;
+
+}
+
+.nav-item ul{
+    list-style-type: none;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: white;
+}
+.nav-item:hover{
+    cursor: pointer;
+}
+
+.selected{
+    border-bottom: 2px solid white;
+}
