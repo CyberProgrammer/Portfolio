@@ -1,14 +1,17 @@
 import WaveHand from '@assets/icons/wave.svg'
-import {useEffect, useState} from "react";
 
-const DesktopLinks = () => {
-    const [isActive, setIsActive] = useState<number>(0);
+interface Link {
+    id: number;
+    text: string;
+    path: string;
+}
 
-    const links = [
-        { text: "Intro", path: "#intro-section" },
-        { text: "About", path: "#about-section" },
-        { text: "Showcase", path: "#showcase-section" },
-    ];
+interface Params{
+    isActive: number,
+    setIsActive: (num: number) => void,
+    links: Link[];
+}
+const DesktopLinks = ({isActive, setIsActive, links}: Params) => {
 
     const handleLinkClick = (index: number) => {
         setIsActive(index);

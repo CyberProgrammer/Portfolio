@@ -71,10 +71,16 @@
     width: 100%;
     padding: 15px;
     border-radius: 5px;
-    background-color: #111111;
+    background-color: white;
+    border: 1px solid #111111;
     text-decoration: none;
 }
 
 .nav-link-text{
-    color: #7DC2E7;
+    color: #111111;
+}
+
+.mobile-active{
+    color: #111111 !important;
+    background-color: #7DC2E7 !important;
 }

@@ -1,18 +1,20 @@
-
 import './mobile.css';
 import {useState} from "react";
 import MobileMenuIcon from "@assets/icons/menu.svg";
-const MobileLinks = () => {
-    const [menuOpen, setMenuOpen] = useState<boolean>(false);
-    const [isActive, setIsActive] = useState<number>(0);
 
-    const links =
-        [
-            { text: "Intro", path: "#intro-section" },
-            { text: "About", path: "#about-section" },
-            { text: "Showcase", path: "#showcase-section" },
-            { text:"Contact", path:"/contact" },
-        ];
+interface Link {
+    id: number;
+    text: string;
+    path: string;
+}
+
+interface Params{
+    isActive: number,
+    setIsActive: (num: number) => void,
+    links: Link[];
+}
+const MobileLinks = ({isActive, setIsActive, links}: Params) => {
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     // Function to toggle menu state
     const toggleMenu = () => {
@@ -38,7 +40,7 @@ const MobileLinks = () => {
                 <ul className="nav-mobile-links-list">
                     {links.map((link, index) => (
                         <li key={index} className={"mobile-nav-item"} onClick={() => handleLinkClick(index)}>
-                            <a href={link.path}>
+                            <a href={link.path} className={isActive === index ? 'mobile-active' : ''}>
                                 <p className="nav-link-text">
                                     {link.text}
                                 </p>
