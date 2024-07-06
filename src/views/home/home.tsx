@@ -1,6 +1,8 @@
 import Navigation from "../../components/navigation/navigation.tsx";
 
-import './home.css'
+import './home.css';
+import '../../App.css';
+
 import Intro from "../intro/intro.tsx";
 import About from "../about/about.tsx";
 import Showcase from "../showcase/showcase.tsx";
