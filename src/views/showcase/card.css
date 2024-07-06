@@ -31,7 +31,8 @@
 }
 
 .card-description{
-    width: 80%;
+    width: 100%;
+    line-height: 17px;
     padding: 10px 0 10px 0;
 }
 
@@ -42,21 +43,32 @@
 }
 
 .link-img{
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
 }
 
 .card-button{
     display: flex;
     justify-content: center;
+    max-height: 25px;
     font-size: 1.1em;
     align-items: center;
     padding: 5px;
     background-color: #7DC2E7;
     border: 1px solid #111111;
     border-radius: 5px;
+    box-shadow: 0 6px 12px -5px rgba(0, 0, 31, .25);
 }
 
+.card-button:hover{
+    cursor: pointer;
+}
+
+.card-button p{
+    font-family: epi, sans-serif;
+    font-size: 0.9em;
+    margin-right: 10px;
+}
 .details-col{
     display: flex;
     align-items: center;

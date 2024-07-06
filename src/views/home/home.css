@@ -4,10 +4,16 @@
 
 @media screen and (min-width: 1920px) {
     #intro-section{
-        /*background-image: none !important;*/
+        background-image: none !important;
+    }
+
+    .content{
+        background-color: #eeeff0 !important;
     }
 }
 #intro-section{
+    display: flex;
+    flex-direction: column;
     padding-top: 100px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -38,7 +44,20 @@
 
 .section-header{
     width: 60%;
+    max-width: 800px;
     margin: auto;
     text-align: center;
+}
+
+.section-content{
+    display: flex;
+    text-align: center;
+    width: 60%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.section-content p{
+    font-size: 1.1em;
 }
 

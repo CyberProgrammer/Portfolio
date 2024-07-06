@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #1a1a1d;
     width: 60%;
 }
 
@@ -28,13 +27,14 @@
 /* Container holding the mobile links */
 .nav-mobile-links{
     position: absolute;
-    top: 80px;
-    width: 60%;
-    height: calc(100vh - 80px);
+    top: 70px;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
     display: none; /* Initially hidden, will be shown when the menu is toggled */
     flex-direction: column;
     align-items: center;
-    background-color: darkgrey;
+    background-color: rgba(246, 247, 249, 0.97);
 }
 
 .show-nav{
@@ -53,26 +53,28 @@
     text-align: center;
 }
 
-.nav-mobile-links-list li{
+.mobile-nav-item{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 40px
+    margin: 1% auto 0 auto;
+    min-height: 40px;
+    color: #7DC2E7;
+    width: 40%;
 }
 
-/* active link state */
-.nav-link-active{
+.mobile-nav-item:hover{
+    cursor: pointer;
+}
 
+.mobile-nav-item a{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #111111;
+    text-decoration: none;
 }
 
 .nav-link-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    text-decoration: none;
-    color: white;
-    background-color: #242529;
-    padding: 2%;
-    border-radius: 5px;
+    color: #7DC2E7;
 }

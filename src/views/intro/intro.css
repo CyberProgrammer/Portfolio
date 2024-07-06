@@ -20,6 +20,7 @@
 .intro-section{
     margin: auto;
     width: 80%;
+    max-width: 1000px;
 }
 
 .intro{
@@ -62,15 +63,7 @@
     }
 }
 
-.section-content{
-    text-align: center;
-    width: 60%;
-    margin-left: 20%;
-}
 
-.section-content p{
-    font-size: 1.1em;
-}
 
 .section-content .intro{
     margin-top: 5px;

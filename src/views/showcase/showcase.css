@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     width: 70%;
+    max-width: 800px;
     margin: auto;
 }
 
