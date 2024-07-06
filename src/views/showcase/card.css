@@ -4,6 +4,48 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .card-header{
+        align-items: start !important;
+    }
+
+    .card-title{
+        width: 70% !important;
+        margin-top: 4px;
+        font-size: 1.1em !important;
+    }
+
+    .card-links{
+        flex-direction: column !important;
+        width: 30% !important;
+        justify-content: center !important;
+    }
+
+    .card-button{
+        margin: 0 !important;
+    }
+
+    .link-button{
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .card-header{
+        flex-direction: column !important;
+    }
+
+    .card-title {
+        width: 100% !important;
+        font-size: 1em !important;
+    }
+
+    .card-links {
+        flex-direction: row !important;
+        width: 100% !important;
+        justify-content: start !important;
+    }
+}
 .card{
     font-family: epilogue-medium, sans-serif;
     width: 100%;
@@ -14,6 +56,10 @@
     background-color: white;
     border: 1px solid #111111;
     color: #111111;
+}
+
+.card-title{
+    width: 60%;
 }
 
 .card-img{
@@ -36,6 +82,13 @@
     padding: 10px 0 10px 0;
 }
 
+.card-links{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .button-container{
     display: flex;
     align-items: center;
@@ -53,6 +106,7 @@
     max-height: 25px;
     font-size: 1.1em;
     align-items: center;
+    margin-left: 15px;
     padding: 5px;
     background-color: #7DC2E7;
     border: 1px solid #111111;
@@ -62,6 +116,19 @@
 
 .card-button:hover{
     cursor: pointer;
+}
+
+.link-button{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+.link-button a{
+    display: flex;
+    align-items: center;
 }
 
 .card-button p{
@@ -81,6 +148,5 @@
 }
 
 .card-link p{
-
     font-size: 1.2em;
 }
