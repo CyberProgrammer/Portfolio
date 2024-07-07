@@ -1,12 +1,10 @@
 import './showcase.css'
 import './card.css'
 
-import ConnectPreview from '@assets/images/cards/connect.jpg'
-import TaskTeamPreview from '@assets/images/cards/task-team.png';
-import ACSimulatorPreview from '@assets/images/cards/ac-sim.png'
-
+import ConnectPreview from '@assets/images/cards/connect.avif'
+import TaskTeamPreview from '@assets/images/cards/task-team.avif';
+import ACSimulatorPreview from '@assets/images/cards/ac-sim.avif'
 import GithubIcon from '@assets/icons/github.svg';
-
 import LinkIcon from '@assets/icons/play.svg';
 
 const Showcase = () => {

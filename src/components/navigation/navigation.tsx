@@ -27,7 +27,7 @@ const Navigation = ({isActive, setIsActive}:Params) => {
 
     return(
         <>
-            <div className={'navigation'}>
+            <nav className={'navigation'}>
                 <div className={'nav-left'}>
                     <img id={'logo'} src={Logo} alt={'Logo'} />
                 </div>
@@ -45,7 +45,7 @@ const Navigation = ({isActive, setIsActive}:Params) => {
                         links={mobile_links}
                     />
                 )}
-            </div>
+            </nav>
         </>
     )
 }

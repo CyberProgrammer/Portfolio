@@ -1,8 +1,7 @@
 #app{
     margin: auto;
-    height: 100vh;
+    height: fit-content;
     max-width: 1920px;
     background-color: #F6F7F9;
     overflow-y: scroll;
-    scrollbar-width: none;
 }

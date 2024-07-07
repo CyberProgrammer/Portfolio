@@ -1,6 +1,6 @@
 @media screen and (max-width: 670px) {
     .card{
-        width: 95% !important;
+        width: 80% !important;
     }
 }
 
@@ -47,15 +47,15 @@
     }
 }
 .card{
-    font-family: epilogue-medium, sans-serif;
     width: 100%;
     min-height: 300px;
     margin: 2% auto 2% auto;
-    border-radius: 10px;
     padding: 15px;
-    background-color: white;
-    border: 1px solid #111111;
+    font-family: epilogue-medium, sans-serif;
     color: #111111;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 3px #000;
 }
 
 .card-title{
@@ -103,7 +103,7 @@
 .card-button{
     display: flex;
     justify-content: center;
-    max-height: 25px;
+    max-height: 30px;
     font-size: 1.1em;
     align-items: center;
     margin-left: 15px;
