@@ -17,7 +17,9 @@ const Showcase = () => {
                 "communication needs of users whether for individual conversations or team collaborations. " +
                 "This system is currently a work in progress, aiming to provide a robust " +
                 "and efficient platform for real-time communication. ",
-            preview: ConnectPreview
+            preview: ConnectPreview,
+            hasDemo: false,
+            demoLink: ''
         },
         {
             title: "Task Team",
@@ -27,6 +29,8 @@ const Showcase = () => {
                 "information on a paper ticket. I wanted to create a solution that allows managers to " +
                 "create tickets(tasks) and be able to push them to either a team or individual. ",
             preview: TaskTeamPreview,
+            hasDemo: false,
+            demoLink: ''
         },
         {
             title: "A/C Simulation",
@@ -35,7 +39,9 @@ const Showcase = () => {
                 "The end goal of this project is to integrate and simulate condensers and air handlers into the system that are controlled via the thermostat. " +
                 "This project has the potential to simulate various components at different levels of complexity. " +
                 "Electrical simulation would also be a big achievement to stride towards. ",
-            preview: ACSimulatorPreview
+            preview: ACSimulatorPreview,
+            hasDemo: false,
+            demoLink: ''
         }
     ]
     return(
@@ -44,22 +50,23 @@ const Showcase = () => {
                 <h1>Latest Creations</h1>
             </div>
             <div className={"card-container"}>
-                { data.map((project, index) => (
+                <p className={"alert-msg"}>Currently working on hosting live project demos</p>
+                {data.map((project, index) => (
                     <div key={index} className={"card"}>
                         <div className={"card-header"}>
                             <h2 className={"card-title"}>
                                 {project.title}
                             </h2>
                             <div className={"card-links"}>
-                                <button className={"link-button"}>
-                                    <a href={project.gitHubLink}>
-                                        <img className={"link-img"} src={GithubIcon} alt={"icon"}/>
+                                <a className={"card-link"} href={project.gitHubLink}>
+                                    <img className={"link-img"} src={GithubIcon} alt={"icon"}/>
+                                </a>
+                                { project.hasDemo && (
+                                    <a className={"card-link"} href={''}>
+                                        <p>Demo</p>
+                                        <img className={"link-img"} src={LinkIcon} alt={"icon"}/>
                                     </a>
-                                </button>
-                                <button className={"card-button"}>
-                                    <p>Demo</p>
-                                    <img className={"link-img"} src={LinkIcon} alt={"icon"}/>
-                                </button>
+                                )}
                             </div>
                         </div>
                         <p className={"card-description"}>

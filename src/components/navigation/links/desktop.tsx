@@ -1,4 +1,7 @@
 import WaveHand from '@assets/icons/wave.svg'
+import {useLocation, useNavigate} from "react-router-dom";
+import {useEffect} from "react";
+import classNames from 'classnames';
 
 interface Link {
     id: number;
@@ -12,19 +15,45 @@ interface Params{
     links: Link[];
 }
 const DesktopLinks = ({isActive, setIsActive, links}: Params) => {
-
+    const location = useLocation();
+    const navigate = useNavigate();
     const handleLinkClick = (index: number) => {
+        if(index != 3 && location.pathname === '/contact'){
+            navigate('/');
+        }
         setIsActive(index);
     };
+
+    useEffect(() => {
+        switch (location.hash){
+            case '#intro-section':
+                setIsActive(0);
+                break;
+            case '#about-section':
+                setIsActive(1);
+                break;
+            case '#showcase-section':
+                setIsActive(2);
+                break;
+            default:
+                break;
+        }
+    }, [location, setIsActive]);
 
     return (
         <>
             <div className={"nav-center"}>
                 <ul className={"links"}>
                     {links.map((link, index) => (
-                        <li key={index} onClick={() => handleLinkClick(index)} className={
-                            `${index === 0 ? 'start-list' : ''} ${index === links.length - 1 ? 'end-list' : ''} ${isActive === index ? 'selected' : ''} nav-item`
-                        }>
+                        <li
+                            key={index}
+                            onClick={() => handleLinkClick(index)}
+                            className={classNames('nav-item', {
+                                'start-list': index === 0,
+                                'end-list': index === links.length - 1,
+                                'selected': isActive === index && location.pathname !== '/contact'
+                            })}
+                        >
                             <a href={link.path}>
                                 <p>{link.text}</p>
                             </a>
@@ -33,18 +62,20 @@ const DesktopLinks = ({isActive, setIsActive, links}: Params) => {
                 </ul>
             </div>
             <div className={"nav-right"}>
-                <ul className={"contact-link"}>
-                    <li className={`contact-item ${isActive === 3 ? 'selected' : ''}`}>
-                        <div className={"contact-link-div"}>
-                            <div className={"text-div"}>
-                                <p>Lets talk</p>
-                            </div>
-                            <div className={"icon-div"}>
-                                <img className={'icon'} src={WaveHand} alt={"Icon"}/>
-                            </div>
-                        </div>
+                <ul className={"contact-link"} onClick={() => handleLinkClick(3)}>
+                    <a href={"/contact"}>
+                        <li className={`contact-item ${isActive === 3 || location.pathname === '/contact' ? 'selected' : ''}`}>
 
-                    </li>
+                            <div className={"contact-link-div"}>
+                                <div className={"text-div"}>
+                                    <p>Lets talk</p>
+                                </div>
+                                <div className={"icon-div"}>
+                                    <img className={'icon'} src={WaveHand} alt={"Icon"}/>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
                 </ul>
             </div>
         </>

@@ -7,18 +7,24 @@ import './home.css';
 import './background-image.css';
 import '../../App.css';
 
+
 import { preloadImage } from '@utils/preloadBackground.ts';
 import Intro from "../intro/intro.tsx";
 import About from "../about/about.tsx";
 import Navigation from "../../components/navigation/navigation.tsx";
 import Showcase from "../showcase/showcase.tsx";
-const Home = () => {
-    const [isActive, setIsActive] = useState<number>(0);
+import Footer from "../../components/footer/footer.tsx";
+
+interface Params{
+    isActive: number,
+    setIsActive: (num: number) => void,
+}
+const Home = ({isActive, setIsActive}: Params) => {
 
     const [isBackgroundImageLoaded, setIsBackgroundImageLoaded] = useState(false);
 
     useEffect(() => {
-        preloadImage('./clouds.avif')
+        preloadImage('clouds.avif')
             .then(() => setIsBackgroundImageLoaded(true))
             .catch((error) => console.error('Error loading image:', error));
     }, []);
@@ -39,7 +45,7 @@ const Home = () => {
         if(!aboutInView && !showcaseInView) setIsActive(0);
         else if(aboutInView && !showcaseInView) setIsActive(1);
         else if(!aboutInView && showcaseInView) setIsActive(2);
-    }, [introInView, aboutInView, showcaseInView]);
+    }, [introInView, aboutInView, showcaseInView, setIsActive]);
 
     return (
         <div id={"app"} ref={introRef}>
@@ -55,6 +61,7 @@ const Home = () => {
                     <Showcase />
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

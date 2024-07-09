@@ -13,3 +13,8 @@
     margin: auto;
 }
 
+.card-container .alert-msg{
+    padding: 5px;
+    text-align: center;
+}
+

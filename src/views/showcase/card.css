@@ -6,7 +6,7 @@
 
 @media screen and (max-width: 600px) {
     .card-header{
-        align-items: start !important;
+        align-items: center !important;
     }
 
     .card-title{
@@ -19,14 +19,6 @@
         flex-direction: column !important;
         width: 30% !important;
         justify-content: center !important;
-    }
-
-    .card-button{
-        margin: 0 !important;
-    }
-
-    .link-button{
-        margin-bottom: 5px;
     }
 }
 
@@ -89,21 +81,10 @@
     justify-content: flex-end;
 }
 
-.button-container{
-    display: flex;
-    align-items: center;
-    height: 30px;
-}
-
-.link-img{
-    height: 20px;
-    width: 20px;
-}
-
-.card-button{
+.card-link{
     display: flex;
     justify-content: center;
-    max-height: 30px;
+    max-height: 25px;
     font-size: 1.1em;
     align-items: center;
     margin-left: 15px;
@@ -114,32 +95,19 @@
     box-shadow: 0 6px 12px -5px rgba(0, 0, 31, .25);
 }
 
-.card-button:hover{
+.card-link:hover{
     cursor: pointer;
 }
 
-.link-button{
-    display: flex;
-    align-items: center;
-    height: 25px;
-    border: none;
-    background-color: transparent;
+.link-img{
+    height: 20px;
+    width: 20px;
 }
 
-.link-button a{
-    display: flex;
-    align-items: center;
-}
-
-.card-button p{
+.card-link p{
     font-family: epi, sans-serif;
     font-size: 0.9em;
     margin-right: 10px;
-}
-.details-col{
-    display: flex;
-    align-items: center;
-    background-color: red;
 }
 
 .card-link{

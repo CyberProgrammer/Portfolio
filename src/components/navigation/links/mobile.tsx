@@ -1,6 +1,8 @@
 import './mobile.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import MobileMenuIcon from "@assets/icons/menu.svg";
+import {useLocation, useNavigate} from "react-router-dom";
+import classNames from 'classnames';
 
 interface Link {
     id: number;
@@ -14,6 +16,9 @@ interface Params{
     links: Link[];
 }
 const MobileLinks = ({isActive, setIsActive, links}: Params) => {
+    const location = useLocation();
+    const navigate = useNavigate();
+
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     // Function to toggle menu state
@@ -22,13 +27,37 @@ const MobileLinks = ({isActive, setIsActive, links}: Params) => {
     };
 
     const handleLinkClick = (index: number) => {
+        if(index != 3 && location.pathname === '/contact'){
+            navigate('/');
+        }
         setIsActive(index);
         closeMenu();
     };
 
-    //
     const closeMenu = () => {
         setMenuOpen(false);
+    };
+
+    useEffect(() => {
+        switch (location.hash){
+            case '#intro-section':
+                setIsActive(0);
+                break;
+            case '#about-section':
+                setIsActive(1);
+                break;
+            case '#showcase-section':
+                setIsActive(2);
+                break;
+            default:
+                break;
+        }
+    }, [location, setIsActive]);
+
+    const determineSelected = (index:number) => {
+        if (index !== 3 && location.pathname !== '/contact' && isActive === index) return true;
+        if (index === 3 && location.pathname === '/contact') return true;
+        return false;
     };
 
     return (
@@ -39,8 +68,15 @@ const MobileLinks = ({isActive, setIsActive, links}: Params) => {
             <div className={`nav-mobile-links ${menuOpen ? 'show-nav' : ''}`}>
                 <ul className="nav-mobile-links-list">
                     {links.map((link, index) => (
-                        <li key={index} className={"mobile-nav-item"} onClick={() => handleLinkClick(index)}>
-                            <a href={link.path} className={isActive === index ? 'mobile-active' : ''}>
+                        <li
+                            key={index}
+                            className={"mobile-nav-item"}
+                            onClick={() => handleLinkClick(index)}
+                        >
+                            <a
+                                href={link.path}
+                                className={classNames({ 'mobile-active': determineSelected(index) })}
+                            >
                                 <p className="nav-link-text">
                                     {link.text}
                                 </p>
