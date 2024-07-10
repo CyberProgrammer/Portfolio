@@ -38,14 +38,18 @@ const Home = ({isActive, setIsActive}: Params) => {
     });
 
     const { ref: showcaseRef, inView: showcaseInView } = useInView({
-        threshold: 0.1,
+        threshold: 0.3,
     });
 
+    const { ref: footerRef, inView: footerInView } = useInView({
+        threshold: 0.2,
+    });
     useEffect(() => {
-        if(!aboutInView && !showcaseInView) setIsActive(0);
-        else if(aboutInView && !showcaseInView) setIsActive(1);
-        else if(!aboutInView && showcaseInView) setIsActive(2);
-    }, [introInView, aboutInView, showcaseInView, setIsActive]);
+        if(introInView && !aboutInView && !showcaseInView && !footerInView) setIsActive(0);
+        else if(aboutInView && !showcaseInView && !footerInView) setIsActive(1);
+        else if(showcaseInView && !aboutInView && !footerInView) setIsActive(2);
+        else if(footerInView) setIsActive(3);
+    }, [introInView, aboutInView, showcaseInView, footerInView, setIsActive]);
 
     return (
         <div id={"app"} ref={introRef}>
@@ -61,7 +65,9 @@ const Home = ({isActive, setIsActive}: Params) => {
                     <Showcase />
                 </div>
             </div>
-            <Footer />
+            <div ref={footerRef}>
+                <Footer />
+            </div>
         </div>
     )
 }

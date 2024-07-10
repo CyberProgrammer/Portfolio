@@ -22,7 +22,7 @@ const Navigation = ({isActive, setIsActive}:Params) => {
         { id: 0, text: "Intro", path: "#intro-section" },
         { id: 1, text: "About", path: "#about-section" },
         { id: 2, text: "Showcase", path: "#showcase-section" },
-        { id: 3, text:"Contact", path:"/contact" },
+        { id: 3, text: "Contact", path:"#footer" },
     ];
 
     return(
