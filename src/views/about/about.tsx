@@ -20,8 +20,8 @@ const About = () => {
                         by developing software, my passion ignited.
                         Learning to code opened up a world of possibilities, allowing me to
                         bring my ideas to life in ways I had never imagined.
-                        I started with small projects, like building simple websites and apps,
-                        and gradually looking to take on more complex challenges. I am excited looking forward to leveraging my skills and curiosity to help make an impact in any way I can.
+                        I started with small projects, like building simple websites, and gradually took on more complex challenges.
+                        I am excited looking forward to leveraging my skills and curiosity to help make an impact in any way I can.
                     </p>
                 </div>
             </div>

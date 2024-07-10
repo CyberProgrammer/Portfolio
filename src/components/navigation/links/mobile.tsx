@@ -1,7 +1,6 @@
 import './mobile.css';
 import {useState} from "react";
 import MobileMenuIcon from "@assets/icons/menu.svg";
-import {useLocation, useNavigate} from "react-router-dom";
 import classNames from 'classnames';
 import useHashLocation from "@utils/useHashLocation.tsx";
 
@@ -17,8 +16,6 @@ interface Params{
     links: Link[];
 }
 const MobileLinks = ({isActive, setIsActive, links}: Params) => {
-    const location = useLocation();
-    const navigate = useNavigate();
 
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
@@ -28,9 +25,6 @@ const MobileLinks = ({isActive, setIsActive, links}: Params) => {
     };
 
     const handleLinkClick = (index: number) => {
-        if(index != 3 && location.pathname === '/contact'){
-            navigate('/');
-        }
         setIsActive(index);
         closeMenu();
     };
@@ -42,10 +36,9 @@ const MobileLinks = ({isActive, setIsActive, links}: Params) => {
     // Uses location hash to determine selected nav-link
     useHashLocation({setIsActive});
 
+    // Takes in the index of the links array and determines which is active
     const determineSelected = (index:number) => {
-        if (index !== 3 && location.pathname !== '/contact' && isActive === index) return true;
-        if (index === 3 && location.pathname === '/contact') return true;
-        return false;
+        return isActive === index;
     };
 
     return (

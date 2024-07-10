@@ -15,7 +15,7 @@ const Showcase = () => {
             gitHubLink: "https://github.com/CyberProgrammer/Connect-Messenger",
             description: "A full-stack messaging system designed to meet the diverse " +
                 "communication needs of users whether for individual conversations or team collaborations. " +
-                "This system is currently a work in progress, aiming to provide a robust " +
+                "This system aims to provide a robust " +
                 "and efficient platform for real-time communication. ",
             preview: ConnectPreview,
             hasDemo: false,
@@ -29,7 +29,7 @@ const Showcase = () => {
             description: "The inspiration of this task came about at my current workplace. " +
                 "When a service ticket is created, they take the old school approach and write down " +
                 "information on a paper ticket. I wanted to create a solution that allows managers to " +
-                "create tickets(tasks) and be able to push them to either a team or individual. ",
+                "create tickets (tasks) and be able to push them to either a team or individuals. ",
             preview: TaskTeamPreview,
             hasDemo: false,
             demoLink: "",

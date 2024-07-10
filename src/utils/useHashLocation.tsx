@@ -18,6 +18,9 @@ const useHashLocation = ({setIsActive}: params) => {
             case '#showcase-section':
                 setIsActive(2);
                 break;
+            case '#footer':
+                setIsActive(3);
+                break;
             default:
                 break;
         }

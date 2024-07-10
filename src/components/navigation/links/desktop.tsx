@@ -1,5 +1,4 @@
 import WaveHand from '@assets/icons/wave.svg'
-import {useLocation, useNavigate} from "react-router-dom";
 import classNames from 'classnames';
 import useHashLocation from "@utils/useHashLocation.tsx";
 
@@ -15,12 +14,8 @@ interface Params{
     links: Link[];
 }
 const DesktopLinks = ({isActive, setIsActive, links}: Params) => {
-    const location = useLocation();
-    const navigate = useNavigate();
+
     const handleLinkClick = (index: number) => {
-        if(index != 3 && location.pathname === '/contact'){
-            navigate('/');
-        }
         setIsActive(index);
     };
 
@@ -38,7 +33,7 @@ const DesktopLinks = ({isActive, setIsActive, links}: Params) => {
                             className={classNames('nav-item', {
                                 'start-list': index === 0,
                                 'end-list': index === links.length - 1,
-                                'selected': isActive === index && location.pathname !== '/contact'
+                                'selected': isActive === index
                             })}
                         >
                             <a href={link.path}>
@@ -50,8 +45,8 @@ const DesktopLinks = ({isActive, setIsActive, links}: Params) => {
             </div>
             <div className={"nav-right"}>
                 <ul className={"contact-link"} onClick={() => handleLinkClick(3)}>
-                    <a href={"/contact"}>
-                        <li className={`contact-item ${isActive === 3 || location.pathname === '/contact' ? 'selected' : ''}`}>
+                    <a href={"#footer"}>
+                        <li className={`contact-item ${isActive === 3 ? 'selected' : ''}`}>
 
                             <div className={"contact-link-div"}>
                                 <div className={"text-div"}>
