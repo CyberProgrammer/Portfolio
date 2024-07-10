@@ -1,7 +1,7 @@
 import WaveHand from '@assets/icons/wave.svg'
 import {useLocation, useNavigate} from "react-router-dom";
-import {useEffect} from "react";
 import classNames from 'classnames';
+import useHashLocation from "@utils/useHashLocation.tsx";
 
 interface Link {
     id: number;
@@ -24,21 +24,8 @@ const DesktopLinks = ({isActive, setIsActive, links}: Params) => {
         setIsActive(index);
     };
 
-    useEffect(() => {
-        switch (location.hash){
-            case '#intro-section':
-                setIsActive(0);
-                break;
-            case '#about-section':
-                setIsActive(1);
-                break;
-            case '#showcase-section':
-                setIsActive(2);
-                break;
-            default:
-                break;
-        }
-    }, [location, setIsActive]);
+    // Uses location hash to determine selected nav-link
+    useHashLocation({setIsActive});
 
     return (
         <>

@@ -5,10 +5,10 @@ import ConnectPreview from '@assets/images/cards/connect.avif'
 import TaskTeamPreview from '@assets/images/cards/task-team.avif';
 import ACSimulatorPreview from '@assets/images/cards/ac-sim.avif'
 import GithubIcon from '@assets/icons/github.svg';
+import YoutubeIcon from '@assets/icons/youtube.svg';
 import LinkIcon from '@assets/icons/play.svg';
 
 const Showcase = () => {
-
     const data = [
         {
             title: "Connect Messenger",
@@ -19,7 +19,9 @@ const Showcase = () => {
                 "and efficient platform for real-time communication. ",
             preview: ConnectPreview,
             hasDemo: false,
-            demoLink: ''
+            demoLink: "",
+            hasVideo: true,
+            videoLink: "https://youtu.be/iyYNWgCp3C0"
         },
         {
             title: "Task Team",
@@ -30,7 +32,9 @@ const Showcase = () => {
                 "create tickets(tasks) and be able to push them to either a team or individual. ",
             preview: TaskTeamPreview,
             hasDemo: false,
-            demoLink: ''
+            demoLink: "",
+            hasVideo: false,
+            videoLink: ""
         },
         {
             title: "A/C Simulation",
@@ -41,9 +45,12 @@ const Showcase = () => {
                 "Electrical simulation would also be a big achievement to stride towards. ",
             preview: ACSimulatorPreview,
             hasDemo: false,
-            demoLink: ''
+            demoLink: "",
+            hasVideo: false,
+            videoLink: ""
         }
     ]
+
     return(
         <>
             <div className={"section-header"}>
@@ -52,12 +59,17 @@ const Showcase = () => {
             <div className={"card-container"}>
                 <p className={"alert-msg"}>Currently working on hosting live project demos</p>
                 {data.map((project, index) => (
-                    <div key={index} className={"card"}>
+                    <div key={index} className={`card`}>
                         <div className={"card-header"}>
                             <h2 className={"card-title"}>
                                 {project.title}
                             </h2>
                             <div className={"card-links"}>
+                                { project.hasVideo && (
+                                    <a className={"card-link"} href={project.videoLink}>
+                                        <img className={"link-img"} src={YoutubeIcon} alt={"icon"}/>
+                                    </a>
+                                )}
                                 <a className={"card-link"} href={project.gitHubLink}>
                                     <img className={"link-img"} src={GithubIcon} alt={"icon"}/>
                                 </a>
