@@ -16,7 +16,6 @@
     }
 
     .card-links{
-        flex-direction: column !important;
         width: 30% !important;
         justify-content: center !important;
     }
@@ -30,12 +29,12 @@
     .card-title {
         width: 100% !important;
         font-size: 1em !important;
+        text-align: center;
     }
 
     .card-links {
         flex-direction: row !important;
         width: 100% !important;
-        justify-content: start !important;
     }
 }
 .card{
