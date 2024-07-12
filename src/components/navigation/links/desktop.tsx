@@ -44,21 +44,18 @@ const DesktopLinks = ({isActive, setIsActive, links}: Params) => {
                 </ul>
             </div>
             <div className={"nav-right"}>
-                <ul className={"contact-link"} onClick={() => handleLinkClick(3)}>
-                    <a href={"#footer"}>
-                        <div className={`contact-item ${isActive === 3 ? 'selected' : ''}`}>
-
-                            <div className={"contact-link-div"}>
-                                <div className={"text-div"}>
-                                    <p>Lets talk</p>
-                                </div>
-                                <div className={"icon-div"}>
-                                    <img className={'icon'} src={WaveHand} alt={"Icon"}/>
-                                </div>
+                <a className={"contact-link"} onClick={() => handleLinkClick(3)} href={"#footer"}>
+                    <div className={`contact-item ${isActive === 3 ? 'selected' : ''}`}>
+                        <div className={"contact-link-div"}>
+                            <div className={"text-div"}>
+                                <p>Lets talk</p>
+                            </div>
+                            <div className={"icon-div"}>
+                                <img className={'icon'} src={WaveHand} alt={"Icon"}/>
                             </div>
                         </div>
-                    </a>
-                </ul>
+                    </div>
+                </a>
             </div>
         </>
     )
