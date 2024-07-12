@@ -46,7 +46,7 @@ const DesktopLinks = ({isActive, setIsActive, links}: Params) => {
             <div className={"nav-right"}>
                 <ul className={"contact-link"} onClick={() => handleLinkClick(3)}>
                     <a href={"#footer"}>
-                        <li className={`contact-item ${isActive === 3 ? 'selected' : ''}`}>
+                        <div className={`contact-item ${isActive === 3 ? 'selected' : ''}`}>
 
                             <div className={"contact-link-div"}>
                                 <div className={"text-div"}>
@@ -56,7 +56,7 @@ const DesktopLinks = ({isActive, setIsActive, links}: Params) => {
                                     <img className={'icon'} src={WaveHand} alt={"Icon"}/>
                                 </div>
                             </div>
-                        </li>
+                        </div>
                     </a>
                 </ul>
             </div>
