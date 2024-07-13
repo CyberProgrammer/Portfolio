@@ -18,3 +18,41 @@
     text-align: center;
 }
 
+.filter-container{
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.tech-stack{
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.tech-stack .title{
+    margin-right: 5px;
+}
+
+.tech-stack .tech{
+    margin-right: 5px;
+}
+
+.technology-filter-container{
+    display: flex;
+    width: 50%;
+    justify-content: end;
+}
+
+.filter-menu{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-top: 5px;
+    border: 1px solid #111111;
+    background-color: #f6f7f9;
+}
+
+.filter-menu .label{
+    width: 100%;
+}

@@ -20,7 +20,6 @@ interface Params{
     setIsActive: (num: number) => void,
 }
 const Home = ({isActive, setIsActive}: Params) => {
-
     const [isBackgroundImageLoaded, setIsBackgroundImageLoaded] = useState(false);
 
     useEffect(() => {
@@ -38,7 +37,7 @@ const Home = ({isActive, setIsActive}: Params) => {
     });
 
     const { ref: showcaseRef, inView: showcaseInView } = useInView({
-        threshold: 0.3,
+        threshold: 0.2,
     });
 
     const { ref: footerRef, inView: footerInView } = useInView({
