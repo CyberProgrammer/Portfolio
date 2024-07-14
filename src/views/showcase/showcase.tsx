@@ -170,9 +170,14 @@ const Showcase = () => {
                         </div>
                         <div className={"tech-stack"}>
                             <p className={"title"}>Technologies:</p>
-                            { project.technologies.map((tech, techIndex) => (
-                                <p className={"tech"} key={techIndex}>{tech},</p>
-                            ))}
+                            <p className={"tech"} >
+                                { project.technologies.map((tech, techIndex) => (
+                                    <span key={techIndex}>
+                                        {tech}
+                                        {techIndex < project.technologies.length - 1 ? ", " : ""}
+                                    </span>
+                                ))}
+                            </p>
                         </div>
                         <p className={"card-description"}>
                             {project.description}

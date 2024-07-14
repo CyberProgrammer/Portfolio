@@ -16,8 +16,15 @@
     }
 
     .card-links{
-        width: 30% !important;
-        justify-content: center !important;
+        width: 50% !important;
+    }
+
+    .card-link{
+        margin-left: 5px !important;
+    }
+
+    .card-description{
+        margin: 20px 0 10px 0 !important;
     }
 }
 
@@ -35,6 +42,7 @@
     .card-links {
         flex-direction: row !important;
         width: 100% !important;
+        justify-content: center !important;
     }
 }
 .card{

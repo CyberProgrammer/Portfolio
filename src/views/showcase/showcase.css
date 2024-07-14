@@ -2,8 +2,40 @@
     .card-container{
         width: 90% !important;
     }
+
+    .filter-container{
+        width: 80% !important;
+        margin-left: 10% !important;
+    }
 }
 
+@media screen and (max-width: 500px) {
+    .technology-filter-container{
+        width: 100% !important;
+    }
+
+    .search-input-container{
+        width: 80% !important;
+        justify-content: center !important;
+    }
+
+    .filter-button{
+        width: auto !important;
+        height: 35px !important;
+    }
+
+    .filter-menu{
+        transform: translateX(-113px) !important;
+    }
+
+    .tech-stack{
+        flex-direction: column !important;
+    }
+
+    .tech-stack p{
+        text-align: left !important;
+    }
+}
 .card-container{
     display: flex;
     flex-direction: column;
@@ -28,6 +60,7 @@
     display: flex;
     align-items: center;
     height: 25px;
+    margin-bottom: 10px;
 }
 
 .tech-stack .title{
@@ -35,7 +68,7 @@
 }
 
 .tech-stack .tech{
-    margin-right: 5px;
+    margin: 5px 5px 5px 0;
 }
 
 .technology-filter-container{
@@ -48,11 +81,14 @@
     position: absolute;
     width: 150px;
     height: 150px;
+    transform: translateX(-50px);
     margin-top: 5px;
     border: 1px solid #111111;
     background-color: #f6f7f9;
 }
 
 .filter-menu .label{
+    display: flex;
     width: 100%;
+    margin: 5px;
 }

@@ -1,7 +1,28 @@
+@media screen and (max-width: 500px) {
+    .button-icon{
+        display: block !important;
+    }
+
+    .button-text{
+        display: none !important;
+    }
+}
+
 .filter-button{
     width: 100px;
     height: 30px;
     border-radius: 5px;
     border: 1px solid #111111;
     background-color: #F6F7F9;
+}
+
+.button-text{
+
+}
+
+.button-icon{
+    display: none;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
 }
