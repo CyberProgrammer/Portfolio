@@ -11,9 +11,11 @@ const Intro = () => {
                 </div>
                 <div className={"section-content"}>
                     <div className={"intro"}>
-                        <p>Aspiring software engineer passionate about solving problems and bringing creative solutions
-                            to
-                            life. The sky is the limit.</p>
+                        <p>
+                            Aspiring software developer specializing in the React ecosystem.
+                            Building responsive interfaces and utilizing backend services with Node.js.
+                            Motivated to solve problems and bring solutions to life.
+                        </p>
                     </div>
                 </div>
             </div>
